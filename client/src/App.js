@@ -2,13 +2,8 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import { Divider, Dropdown, Image, Button, Segment } from 'semantic-ui-react'
 import Header from "./components/Header/Header";
-import Home from "./components/Home/Home";
 import Search from "./components/Search/Search";
 import Details from "./components/Details/Details";
-
-const HomePage = () => {
-  return <Home />;
-};
 
 const SearchPage = () => {
   return <Search />;
@@ -38,9 +33,9 @@ function App() {
         </Header>
       </Segment>
       <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route path="/search" component={SearchPage} />
+        <Route exact path="/" component={SearchPage} />
         <Route path="/details" component={DetailsPage} />
+        <Route path="/*" component={SearchPage} />
       </Switch>
     </div>
   );
