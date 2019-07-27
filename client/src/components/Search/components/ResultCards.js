@@ -27,7 +27,7 @@ class ResultCards extends Component {
   render() { 
     return ( 
       <div>
-        <Segment style={{padding: 0, margin: 10}}>
+        <Segment color={this.props.color} style={{padding: 0, margin: 10}}>
           <Grid columns={2}>
             <Grid.Column width={7}>
               <img style={{width: '100%', height: '100%', objectFit: 'cover'}} src={this.props.image}/>
@@ -35,7 +35,7 @@ class ResultCards extends Component {
             <Grid.Column  width={9} style={{textAlign: 'left', paddingTop: 20, paddingleft: 0}}>
               <Grid columns={2}>
                 <Grid.Row style={{paddingBottom: 0}}>
-                  <Grid.Column width={10} style={{paddingLeft: 0}}>
+                  <Grid.Column width={10} style={{paddingLeft: 0, color:'#4287f5'}}>
                     <h5>{this.props.name}</h5>
                   </Grid.Column>
                   <Grid.Column width={5} style={{textAlign: 'right', paddingLeft: 0}}>
@@ -46,9 +46,9 @@ class ResultCards extends Component {
                   <h6 style={{paddingBottom: 0, margin: 0}}>{this.props.type}</h6>
                 </GridRow>
                 <GridRow style={{padding: 0}}>
-                  <p style={{paddingTop: 0, fontSize: 11}}>{this.props.description}</p>
+                  <p style={{paddingTop: 0, fontSize: 11, marginRight: 10}}>{this.props.description}</p>
                 </GridRow>
-                <GridRow style={{padding: 5}}>
+                <GridRow style={{position: 'absolute', bottom: 25}}>
                   <Grid.Column>
                     <Button size='mini'>Book</Button>
                   </Grid.Column>
