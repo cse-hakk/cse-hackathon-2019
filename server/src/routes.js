@@ -30,6 +30,10 @@ module.exports = app => {
     SustainabilityController.getAllSustainabilityByAttractionID
   );
   app.get(
+    "/SustainabilityAverageByAttractionID",
+    SustainabilityController.getAverageSustainabilityByAttractionID
+  );
+  app.get(
     "/SustainabilityByID",
     SustainabilityController.getSustainabilityByID
   );
