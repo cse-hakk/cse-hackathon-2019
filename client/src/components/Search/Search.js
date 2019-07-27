@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import SearchTile from "./components/SearchTile";
 import ResultCards from "./components/ResultCards";
-import { Container, Grid, Card, GridRow, Item } from "semantic-ui-react";
+import { Container, Grid} from "semantic-ui-react";
 
 const cardList = [
   {
@@ -11,7 +11,11 @@ const cardList = [
     location: 'Phuket',
     description: 'Discover the best of Phi Phi Island on a Tour for $145pp',
     image: require('./Images/island.jpg'),
-    rating: 5
+    rating: 5,
+    key: 0,
+    reviewCount: '117',
+    descriptionExtended: 'PLACEHOLDER',
+    professional: 'PROFESSIONAL'
   },
   {
     name: 'The Grand Palace',
@@ -19,7 +23,11 @@ const cardList = [
     location: 'Bangkok',
     description: 'Discover the greatly revered Emerald Buddha at the Grand Palace for $23pp',
     image: require('./Images/temple.png'),
-    rating: 4
+    rating: 4,
+    key: 0,
+    reviewCount: '42',
+    descriptionExtended: 'PLACEHOLDER',
+    professional: 'PROFESSIONAL'
   },
   {
     name: 'Tiger Kingdom',
@@ -27,14 +35,26 @@ const cardList = [
     location: 'Phuket',
     description: 'Up-close interaction with tigers in caged enclosures for $75pp',
     image: require('./Images/lion.png'),
-    rating: 1
+    rating: '1',
+    key: 0,
+    reviewCount: '73',
+    descriptionExtended: 'PLACEHOLDER',
+    professional: 'PROFESSIONAL'
   }
 ]
 
 function AttractionCards() {
   var cards = cardList.map((item) => {
     return (
-      <NavLink to='/details' style={{color:'black'}}>
+      <Link to={{pathname: '/details',
+       state: {
+         description: item.description,
+         name: item.name,
+         location: item.location,
+         country: item.country,
+         rating: item.rating,
+         image: item.image,
+       }}} style={{color:'black'}}>
       <ResultCards
         name={item.name}
         location={item.location}
@@ -43,7 +63,7 @@ function AttractionCards() {
         rating={item.rating}
         color={item.rating >=4 ? 'green' : 'red'}
       />
-      </NavLink>
+      </Link>
     )
   }) 
   return (
