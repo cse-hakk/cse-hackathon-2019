@@ -2,8 +2,8 @@ import React from 'react';
 import { Layout } from 'antd';
 
 import SummaryCard from './components/SummaryCard';
-import logo from './logo.svg';
-import './App.css';
+import logo from './images/logo.svg';
+import './css/App.css';
 
 const { Header, Content, Footer } = Layout;
 
