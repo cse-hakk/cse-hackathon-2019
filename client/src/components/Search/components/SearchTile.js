@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import SearchBar from './SearchBar'
 
 class SearchTile extends Component {
   state = {  }
@@ -7,6 +7,7 @@ class SearchTile extends Component {
     return ( 
       <div>
         SearchTile
+        <SearchBar/>
       </div>
      );
   }

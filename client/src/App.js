@@ -19,6 +19,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={SearchPage} />
         <Route path="/details" component={DetailsPage} />
+        <Route path="/*" component={SearchPage} />
       </Switch>
     </div>
   );
