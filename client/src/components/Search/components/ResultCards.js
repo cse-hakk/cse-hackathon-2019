@@ -1,5 +1,21 @@
 import React, { Component } from 'react';
-import { Card, Grid, GridColumn, Header, Image } from 'semantic-ui-react';
+import { Grid, Rating, Segment, GridRow, Button, Divider } from 'semantic-ui-react';
+
+const RatingItem = props => {
+  return (
+    <div>
+      <div>{props.name}</div>
+      <Rating
+        maxRating={5}
+        defaultRating={props.rating}
+        icon="star"
+        size="mini"
+        disabled
+      />
+    </div>
+  );
+};
+
 
 class ResultCards extends Component {
   constructor(props) {
@@ -11,16 +27,45 @@ class ResultCards extends Component {
   render() { 
     return ( 
       <div>
-        <Card style={{margin: 10}}>
-          <Card.Content>
-            <Image floated='left' size='tiny' src='https://scontent.fcbr1-1.fna.fbcdn.net/v/t1.15752-9/67257915_2311193318930644_4146697087842516992_n.png?_nc_cat=107&_nc_oc=AQkf22OZ5jvjkHZOVevIGVC6GfgyUvRJNCidckIT34C2Wmup9M3U03_djfDjU_qrNmo&_nc_ht=scontent.fcbr1-1.fna&oh=c45d85284bd152a99ca79571051d260e&oe=5DE36BA2'/>
-            <Card.Header>Test Header</Card.Header>
-            <Card.Meta> Location</Card.Meta>
-            <Card.Description>
-              A short descriptino about animal abuse or some shit
-            </Card.Description>
-          </Card.Content>
-        </Card>
+        <Segment color={this.props.color} style={{padding: 0, margin: 10}}>
+          <Grid columns={2}>
+            <Grid.Column width={7}>
+              <img style={{width: '100%', height: '100%', objectFit: 'cover'}} src={this.props.image}/>
+            </Grid.Column>
+            <Grid.Column  width={9} style={{textAlign: 'left', paddingTop: 20, paddingleft: 0}}>
+              <Grid columns={2}>
+                <Grid.Row style={{paddingBottom: 0}}>
+                  <Grid.Column width={10} style={{paddingLeft: 0, color:'#4287f5'}}>
+                    <h5>{this.props.name}</h5>
+                  </Grid.Column>
+                  <Grid.Column width={5} style={{textAlign: 'right', paddingLeft: 0}}>
+                    {this.props.location}
+                  </Grid.Column>
+                </Grid.Row>
+                <GridRow style={{padding: 0}}>
+                  <h6 style={{paddingBottom: 0, margin: 0}}>{this.props.type}</h6>
+                </GridRow>
+                <GridRow style={{padding: 0}}>
+                  <p style={{paddingTop: 0, fontSize: 11, marginRight: 10}}>{this.props.description}</p>
+                </GridRow>
+                <GridRow style={{position: 'absolute', bottom: 25}}>
+                  <Grid.Column>
+                    <Button size='mini'>Book</Button>
+                  </Grid.Column>
+                  <Grid.Column>
+                    <Button size='mini'>Save</Button>
+                  </Grid.Column>
+                </GridRow>
+                <GridRow style={{position: 'absolute', bottom: 0}}>
+                  <text style={{fontSize: 10, paddingRight: 15}}>Sustainability Rating</text> <RatingItem
+                    rating = {this.props.rating}
+                  />
+                </GridRow>
+              </Grid>
+              
+            </Grid.Column>
+          </Grid>
+        </Segment>
       </div>
 
      );
