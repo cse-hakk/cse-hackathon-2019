@@ -34,14 +34,14 @@ const ratings = {
 
 const reviews = { 
   0: [
-    { header: "Extremely Cruel - Do not visit", description: "These poor tigers would be scarred for life. It is the poorest treatment" },
-    { header: "Do not visit very cruel!", description: "Tigers are obviously caught and held captive against their will in small cages with no room to move at all" },
-    { header: "Concerning", description: "The tigers might have been drugged as they look very tired all the time and after a few seconds, they would go back to sleep" }, 
+    { header: "Incredibly clean!", description: "The local government does a great job keeping the natural habitats clean" },
+    { header: "Not too overcrowded", description: "Glad to see that the human impact was low!" },
+    { header: "Petrol boats", description: "Wonderful scenery, but I just can't help but think about the pollution from all those boats..." }, 
   ],
   1: [
-    { header: "Extremely Cruel - Do not visit", description: "These poor tigers would be scarred for life. It is the poorest treatment" },
-    { header: "Do not visit very cruel!", description: "Tigers are obviously caught and held captive against their will in small cages with no room to move at all" },
-    { header: "Concerning", description: "The tigers might have been drugged as they look very tired all the time and after a few seconds, they would go back to sleep" }, 
+    { header: "Incredibly clean!", description: "The local government does a great job keeping the natural habitats clean" },
+    { header: "Not too overcrowded", description: "Glad to see that the human impact was low!" },
+    { header: "Petrol boats", description: "Wonderful scenery, but I just can't help but think about the pollution from all those boats..." }, 
   ],
   2: [
     { header: "Extremely Cruel - Do not visit", description: "These poor tigers would be scarred for life. It is the poorest treatment" },
@@ -54,15 +54,34 @@ class DetailedCard extends Component {
   constructor(props) {
     super(props);
     this.props = props
-    if (props.name == 'Phi Phi Island Tour') {
+    if (this.props.name == 'Phi Phi Island Tour') {
       this.key = 0
-    } else if (props.name == 'The Grand Palace') {
+    } else if (this.props.name == 'The Grand Palace') {
       this.key = 1
     } else {
       this.key = 2
     }
   }
   state = {};
+
+  componentDidMount() {
+    if (this.props.name == 'Phi Phi Island Tour') {
+      this.key = 0
+    } else if (this.props.name == 'The Grand Palace') {
+      this.key = 1
+    } else {
+      this.key = 2
+    }
+  }
+  componentDidUpdate() {
+    if (this.props.name == 'Phi Phi Island Tour') {
+      this.key = 0
+    } else if (this.props.name == 'The Grand Palace') {
+      this.key = 1
+    } else {
+      this.key = 2
+    }
+  }
   render() {
     return (
       <Segment style={{ backgroundColor: "#e5e5e5" }}>
