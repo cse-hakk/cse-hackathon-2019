@@ -20,7 +20,7 @@ module.exports = {
     try {
       let sustainability = await Sustainability.findAll({
         where: {
-          attraction_id: req.body.attraction_id
+          attraction_id: req.query.attraction_id
         }
       });
 
@@ -39,7 +39,7 @@ module.exports = {
     try {
       let sustainability = await Sustainability.findAll({
         where: {
-          attraction_id: req.body.attraction_id
+          attraction_id: req.query.attraction_id
         }
       });
 
