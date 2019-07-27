@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import * as serviceWorker from "./serviceWorker";
 import App from "./App";
-import 'semantic-ui-css/semantic.min.css'
+// import "semantic-ui-css/semantic.min.css";
 import "semantic-ui/dist/semantic.min.css";
 
 ReactDOM.render(
