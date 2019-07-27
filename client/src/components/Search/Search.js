@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import SearchTile from './components/SearchTile';
 import ResultCards from "./components/ResultCards";
-import { Container, Grid } from "semantic-ui-react";
+import { Container, Grid, Card, GridRow } from "semantic-ui-react";
+import 'semantic-ui-css/semantic.min.css';
 
 class Search extends Component {
   state = {};
@@ -13,7 +14,12 @@ class Search extends Component {
         <SearchTile/>
         <Grid.Row>
           <ResultCards
-            locationName='test'
+            attractionName='Phi Phi Island Tour'
+            locationName='Phucket'
+          />
+          <ResultCards
+            attractionName='Phi Phi Island Tour'
+            locationName='Phucket'
           />
         </Grid.Row>
       </Grid>
