@@ -2,3 +2,6 @@
   text-align: left;
   min-height: 100px;
 }
+.row {
+  padding: 0;
+}

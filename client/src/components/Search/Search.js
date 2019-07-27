@@ -4,6 +4,7 @@ import ResultCards from "./components/ResultCards";
 import { Container, Grid, Card, GridRow } from "semantic-ui-react";
 import 'semantic-ui-css/semantic.min.css';
 
+
 class Search extends Component {
   state = {};
   render() {
@@ -14,12 +15,16 @@ class Search extends Component {
         <SearchTile/>
         <Grid.Row>
           <ResultCards
-            attractionName='Phi Phi Island Tour'
-            locationName='Phucket'
+            name='Phi Phi Island Tour'
+            location='Phucket'
+            description='a very great place !!!'
+            image={image}
           />
           <ResultCards
             attractionName='Phi Phi Island Tour'
             locationName='Phucket'
+            image={image}
+            rating={5}
           />
         </Grid.Row>
       </Grid>
