@@ -1,11 +1,11 @@
 import React from 'react';
 import { Layout } from 'antd';
 
-import SummaryCard from 'components';
+import SummaryCard from './components/SummaryCard';
 import logo from './logo.svg';
 import './App.css';
 
-const { Header, Content } = Layout;
+const { Header, Content, Footer } = Layout;
 
 function App() {
   return (
@@ -13,9 +13,10 @@ function App() {
       <Layout>
         <Header>Header</Header>
         <Content>
-
+          <SummaryCard/>
         </Content>
       </Layout>
+      <Footer/>
     </div>
   );
 }
