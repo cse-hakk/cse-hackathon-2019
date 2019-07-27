@@ -1,8 +1,7 @@
 import React, { Component } from "react";
-import SearchTile from './components/SearchTile';
+import SearchTile from "./components/SearchTile";
 import ResultCards from "./components/ResultCards";
 import { Container, Grid, Card, GridRow } from "semantic-ui-react";
-import 'semantic-ui-css/semantic.min.css';
 
 
 class Search extends Component {
