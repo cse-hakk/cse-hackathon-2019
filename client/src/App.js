@@ -20,13 +20,12 @@ const DetailsPage = () => {
 function App() {
   return (
     <div className="App">
-      {/* <Header /> */}
-      {/* <Switch>
+      <Header />
+      <Switch>
         <Route exact path="/" component={HomePage} />
         <Route path="/search" component={SearchPage} />
         <Route path="/details" component={DetailsPage} />
-      </Switch> */}
-      <div>Hello world</div>
+      </Switch>
     </div>
   );
 }
