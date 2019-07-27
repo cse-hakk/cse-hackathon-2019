@@ -15,11 +15,11 @@ const DetailsPage = () => {
 function App() {
   return (
     <div className="App">
-      <Header />
+      {/* <Header /> */}
       <Switch>
-        <Route exact path="/" component={SearchPage} />
+        {/* <Route exact path="/" component={SearchPage} /> */}
         <Route path="/details" component={DetailsPage} />
-        <Route path="/*" component={SearchPage} />
+        {/* <Route path="/*" component={SearchPage} /> */}
       </Switch>
     </div>
   );
