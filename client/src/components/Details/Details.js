@@ -35,7 +35,7 @@ class Details extends Component {
     detailed: {},
   };
   componentDidMount () {
-    const { description, name, location, country, rating, image } = this.props.location.state
+    const { description, name, location, country, rating, image, descriptionExtended, professional } = this.props.location.state
     this.setState({
       description: description,
       name: name,
@@ -43,6 +43,8 @@ class Details extends Component {
       location: location,
       country: country,
       rating: rating,
+      descriptionExtended: descriptionExtended,
+      professional: professional,
     })
   }
    

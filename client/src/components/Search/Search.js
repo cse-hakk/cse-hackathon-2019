@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import SearchTile from "./components/SearchTile";
 import ResultCards from "./components/ResultCards";
 import { Container, Grid} from "semantic-ui-react";
+import { withRouter } from 'react-router-dom';
 
 const cardList = [
   {
@@ -14,8 +15,8 @@ const cardList = [
     rating: 5,
     key: 0,
     reviewCount: '117',
-    descriptionExtended: 'PLACEHOLDER',
-    professional: 'PROFESSIONAL'
+    descriptionExtended: 'The Phi Phi islands are some of the loveliest in Southeast Asia. These picture postcard islands offer the ultimate sustainable tropical getaway!',
+    professional: 'The Phi Phi Islands are a verified sustainable location'
   },
   {
     name: 'The Grand Palace',
@@ -35,10 +36,10 @@ const cardList = [
     location: 'Phuket',
     description: 'Up-close interaction with tigers in caged enclosures for $75pp',
     image: require('./Images/lion.png'),
-    rating: '1',
+    rating: 1,
     key: 0,
     reviewCount: '73',
-    descriptionExtended: 'PLACEHOLDER',
+    descriptionExtended: 'Thailand’s Tiger Kingdom Is No Sanctuary for Animals!',
     professional: 'PROFESSIONAL'
   }
 ]
@@ -54,6 +55,8 @@ function AttractionCards() {
          country: item.country,
          rating: item.rating,
          image: item.image,
+         descriptionExtended: item.descriptionExtended,
+         professional: item.professional,
        }}} style={{color:'black'}}>
       <ResultCards
         name={item.name}
@@ -96,4 +99,4 @@ class Search extends Component {
   }
 }
 
-export default Search;
+export default withRouter(Search);

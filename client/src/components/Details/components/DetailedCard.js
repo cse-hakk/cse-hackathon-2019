@@ -11,11 +11,10 @@ import { Reviews } from "./Reviews";
 
 const ratings = { 
   0: [
-    { name: "Sustainability", rating: 1 },
-    { name: "Regulations", rating: 1 },
+    { name: "Sustainability", rating: 4 },
+    { name: "Regulations", rating: 3 },
     { name: "Transportation", rating: 2 },
-    { name: "Cleanliness", rating: 2 },
-    { name: "Animal Treatment", rating: 1 }
+    { name: "Cleanliness", rating: 4 },
   ],
   1: [
     { name: "Sustainability", rating: 1 },
@@ -82,9 +81,11 @@ class DetailedCard extends Component {
         </Container>
         <Container>
           <br />
-          <Header as="h3">{this.props.professional}</Header>
+          <Header as="h3">Professional opinion</Header>
           <div>{this.props.descriptionExtended}</div>
-          <Button color="grey">See all Reviews {this.props.reviewCount}</Button>
+          <div style={{textAlign: 'center', width: '100%'}}>
+            <a size='mini' color="grey" style={{display: 'inline-block', color: 'grey', marginTop: 5}}>See all Reviews (63)</a>
+          </div>
         </Container>
         <br />
         <Container>
