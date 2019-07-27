@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Header, Container } from 'semantic-ui-react';
 import SearchBar from './SearchBar'
 
 class SearchTile extends Component {
@@ -6,8 +7,10 @@ class SearchTile extends Component {
   render() { 
     return ( 
       <div>
-        SearchTile
+      <Container textAlign='center'>
+        <Header as='h1'>Start your journey to sustainability</Header>
         <SearchBar/>
+      </Container>
       </div>
      );
   }
