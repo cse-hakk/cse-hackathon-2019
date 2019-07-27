@@ -1,8 +1,15 @@
 import React, { Component } from "react";
+import SearchTile from './components/SearchTile';
+
 class Search extends Component {
   state = {};
   render() {
-    return <div>search</div>;
+    return (
+    <div>
+      search
+      <SearchTile/>
+    </div>
+    );
   }
 }
 
