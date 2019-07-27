@@ -4,11 +4,10 @@ import SearchTile from "./components/SearchTile";
 import ResultCards from "./components/ResultCards";
 import { Container, Grid, Card, GridRow, Item } from "semantic-ui-react";
 
-const image = require('./Images/island.jpg')
-
 const cardList = [
   {
     name: 'Phi Phi Island Tour',
+    country: 'Thailand',
     location: 'Phuket',
     description: 'Discover the best of Phi Phi Island on a Tour for $145pp',
     image: require('./Images/island.jpg'),
@@ -16,6 +15,7 @@ const cardList = [
   },
   {
     name: 'The Grand Palace',
+    country: 'Thailand',
     location: 'Bangkok',
     description: 'Discover the greatly revered Emerald Buddha at the Grand Palace for $23pp',
     image: require('./Images/temple.png'),
@@ -23,6 +23,7 @@ const cardList = [
   },
   {
     name: 'Tiger Kingdom',
+    country: 'Thailand',
     location: 'Phuket',
     description: 'Up-close interaction with tigers in caged enclosures for $75pp',
     image: require('./Images/lion.png'),
@@ -64,7 +65,9 @@ class Search extends Component {
     <div>
     <Container style={{paddingTop: 50}}>
       <Grid centered>
-        <SearchTile/>
+        <SearchTile
+          items={cardList}
+        />
         <AttractionCards/>
       </Grid>
     </Container>
