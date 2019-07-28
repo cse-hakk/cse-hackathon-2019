@@ -1,7 +1,5 @@
 import React from 'react';
-
-import { Card, Row, Col } from 'antd';
-import '../css/cards.css'
+import { Card } from 'antd';
 
 const { Meta } = Card;
 
@@ -9,33 +7,20 @@ function SummaryCard(props) {
   return (
     <Card
       hoverable
-      className={'summaryCard'}
+      style = {{width: 200}}
+      bordered = {false}
       >
-        <div>
+        <div style={{'border-style': 'solid', 'border-width': 1}}>
+          Title
+        </div>
         <span>
-          {props.locationName}
+          text 1
         </span>
-          <span>
-            {props.}
-          </span>
-        </div>
-        <div>
-          <span>
-            props.
-          </span>
-          <span>
-            text 2slkfm as;ilrgjp sojh o[dmg o[h[]]]
-          </span>
-        </div>
+        <span>
+          text 2
+        </span>
       </Card>
   )
 }
 
-function CardList(props) {
-  return (
-    <div>
-      <SummaryCard/>  
-    </div>
-  )
-}
-export default CardList;
+export default SummaryCard;
